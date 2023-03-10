@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       restorationScopeId: 'app',
-      home:  MyHomePage(),
+      home: MyHomePage(),
     );
   }
 }
@@ -21,44 +21,43 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
 
-
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
-
-      body: Center(
-
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).restorablePush(SecondPage.secondPageRouteBuilderWithPragma);
-              },
-              child: const Text('Second Page static pragma'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).restorablePush(SecondPage.secondPageRouteBuilderNoPragma);
-              },
-              child: const Text('Second Page static no pragma'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).restorablePush(secondPageRouteBuilderWithPragma);
-              },
-              child: const Text('Second Page top level with pragma'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).restorablePush(secondPageRouteBuilderNoPragma);
-              },
-              child: const Text('Second Page top level no pragma'),
-            ),
-          ],
-        ),
+        body: Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context)
+                  .restorablePush(SecondPage.secondPageRouteBuilderWithPragma);
+            },
+            child: const Text('Second Page static pragma'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context)
+                  .restorablePush(SecondPage.secondPageRouteBuilderNoPragma);
+            },
+            child: const Text('Second Page static no pragma'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context)
+                  .restorablePush(secondPageRouteBuilderWithPragma);
+            },
+            child: const Text('Second Page top level with pragma'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context)
+                  .restorablePush(secondPageRouteBuilderNoPragma);
+            },
+            child: const Text('Second Page top level no pragma'),
+          ),
+        ],
+      ),
     ));
   }
 }
-

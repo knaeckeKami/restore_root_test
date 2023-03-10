@@ -1,6 +1,4 @@
-
 import 'package:flutter/material.dart';
-
 
 Route secondPageRouteBuilderNoPragma(BuildContext context, Object? args) {
   return MaterialPageRoute<void>(
@@ -23,15 +21,16 @@ class SecondPage extends StatelessWidget {
     return const Placeholder();
   }
 
-
-  static Route secondPageRouteBuilderNoPragma(BuildContext context, Object? args) {
+  static Route secondPageRouteBuilderNoPragma(
+      BuildContext context, Object? args) {
     return MaterialPageRoute<void>(
       builder: (context) => const SecondPage(),
     );
   }
 
   @pragma('vm:entry-point')
-  static Route secondPageRouteBuilderWithPragma(BuildContext context, Object? args) {
+  static Route secondPageRouteBuilderWithPragma(
+      BuildContext context, Object? args) {
     return MaterialPageRoute<void>(
       builder: (context) => const SecondPage(),
     );
